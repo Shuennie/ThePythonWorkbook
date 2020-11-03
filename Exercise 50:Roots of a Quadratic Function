@@ -1,0 +1,23 @@
+#Exercise 50: Roots of a Quadratic Function
+import math
+
+try:
+    a = float(input('Please enter value a (must be a non-zero): '))
+    b = float(input('Please enter value b: '))
+    c = float(input('Please enter value c: '))
+except:
+    print('Value must be a number, please try again')
+    quit()
+
+discriminant = (b**2)-(4*a*c)
+print('Discriminant = ',discriminant)
+
+if discriminant <0:
+    print('Quadratic equation has no real roots')
+elif discriminant ==0:
+    root = (-b + math.sqrt(discriminant)) / (2 * a)
+    print('Quadratic equation has one real root','root =',root)
+else:
+    root1 = (-b+math.sqrt(discriminant))/(2*a)
+    root2 = (-b-math.sqrt(discriminant))/(2*a)
+    print('Quadratic equation has two real roots','root 1 =',root1,'root 2 =',root2)
