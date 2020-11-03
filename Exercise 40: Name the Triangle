@@ -1,0 +1,15 @@
+#Name the triangle
+try:
+    Length1 = int(input('Enter length (cm) of side #1 of triangle: '))
+    Length2 = int(input('Enter length (cm) of side #2 of triangle: '))
+    Length3 = int(input('Enter length (cm) of side #3 of triangle: '))
+except:
+    print('Input not recognised, try again')
+    quit()
+
+if Length1 == Length2 == Length3:
+    print('Equilateral triangle')
+elif Length1 == Length2 or Length2 == Length3 or Length1 == Length3:
+    print('Isoceles triangle')
+else:
+    print('Scalene triangle')
