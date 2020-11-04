@@ -1,0 +1,36 @@
+#Exercise 60: Roulette Payouts
+
+import random
+
+roulette =list(range(0,38)) #use 37 to represent 00
+range1=list(range(1,19))
+range2=list(range(18,37))
+
+red = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]
+print('Roulette =',roulette)
+
+random_num = random.choice(roulette)
+
+if random_num == 37:
+    random_num = "00"
+    print('The spin resulted in ', random_num)
+    print('Pay', random_num)
+    quit()
+elif random_num ==0:
+    print('The spin resulted in ',random_num)
+    print('Pay',random_num)
+    quit()
+elif random_num in red:
+    print('The spin resulted in ', random_num)
+    print('Pay', random_num)
+    print('Pay Red')
+
+if random_num % 2 == 0:
+    print('Pay Even')
+else:
+    print('Pay Odd')
+
+if random_num in range1:
+    print('Pay 1 to 18')
+elif random_num in range2:
+    print('Pay 19 to 36')
