@@ -1,0 +1,13 @@
+#Exercise 61: Average 
+number = float(input('Please enter a value. If no further values, please enter 0.\nValue: '))
+if number ==0:
+    print('The first number cannot be zero')
+sumofallnumbers = 0
+count = 0
+while number !=0:
+    sumofallnumbers = sumofallnumbers + number
+    number = float(input('Please enter a value. If no further values, please enter 0.\nValue: '))
+    count = count + 1
+
+averagenumber = sumofallnumbers//count
+print(averagenumber)
