@@ -1,0 +1,17 @@
+#Exercise 62: Discount Table
+
+import numpy as np
+
+#list of prices
+oldprices = [4.95,9.95,14.95,19.95,24.95]
+
+#convert list into Numpy array
+np_oldprices = np.array(oldprices)
+discount = 0.6
+
+discountamount = np_oldprices*discount
+newprices = np_oldprices*(1-discount)
+
+print('Original prices (in $): ',oldprices)
+print('Discounted by (in $): ',discountamount)
+print('New prices (in $): ',newprices)
