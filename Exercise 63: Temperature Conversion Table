@@ -1,0 +1,7 @@
+Exercise 63: Temperature Conversion Table
+Celsius = list(range(0,101,10))
+
+print('Celsius | Fahrenheit')
+for celsiusTemp in Celsius:
+    fahrenheitTemp = celsiusTemp*9/5+32
+    print(celsiusTemp, '|',fahrenheitTemp)
