@@ -1,0 +1,34 @@
+#Exercise 69: Approximate pi
+
+maxrun = 15
+denominator1 = 2
+denominator2 = 3
+denominator3 = 4
+fractionpos = (4/(denominator1*denominator2*denominator3))
+denominatora = 4
+denominatorb = 5
+denominatorc = 6
+fractionneg = -4/(denominatora*denominatorb*denominatorc)
+
+pi = 3
+count = 1
+
+while maxrun != 0:
+    if count %2 != 0:   #odd runs are positive
+        pi = pi+fractionpos
+        print('Approximation',count,'pi value is',pi)
+        count = count+1
+        denominator1 = denominator1+4
+        denominator2 = denominator2+4
+        denominator3 = denominator3+4
+        maxrun = maxrun-1
+        fractionpos = (4 / (denominator1 * denominator2 * denominator3))
+    elif count %2 ==0:    #even runs are negative
+        pi = pi+fractionneg
+        print('Approximation',count,'pi value',pi)
+        count = count+1
+        denominatora = denominatora+4
+        denominatorb = denominatorb+4
+        denominatorc = denominatorc+4
+        maxrun = maxrun-1
+        fractionneg = -4 / (denominatora * denominatorb * denominatorc)
